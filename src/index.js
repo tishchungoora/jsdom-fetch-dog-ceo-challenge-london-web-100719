@@ -1,5 +1,3 @@
-console.log('%c HI', 'color: firebrick')
-
 // on page load
 document.addEventListener("DOMContentLoaded", function() {
     fetchImageData();
@@ -51,7 +49,8 @@ function renderBreedsList(breedJson) {
         let dogLiEl = document.createElement("li");
         dogLiEl.innerText = key;
         breedsList.appendChild(dogLiEl);
-        dogLiEl.addEventListener('click', changeColor); 
+        dogLiEl.style.cursor = "pointer";
+        dogLiEl.addEventListener("click", changeColor); 
     }
 }
 
